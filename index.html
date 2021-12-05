@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play SafeVial - Juega y Aprende Sobre Seguridad Vial</title>
+    <!-- Importacion librerias -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="resources/css/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <!-- Menú -->
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div> <!--mobile-menu -->
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="site-logo col-6"><a href="index.html"><img src="resources/img/logo.png" alt="logo" width="370"></a></div>
+
+            <nav class="mx-auto site-navigation">
+              <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="#">Información</a></li>
+                <li class="has-children">
+                  <a href="#">Pauta con nosotros</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Cómo funciona</a></li>
+                    <li><a href="#">Dejanos un mensaje</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+              <div class="ml-auto">
+                <a href="" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block" data-toggle="modal" data-target="#myModalRegistro"><span class="mr-2 icon-add"></span>Registrarse</a>
+                <a href="" class="btn btn-primary border-width-2 d-none d-lg-inline-block" data-toggle="modal" data-target="#myModalLogin"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+              </div>
+              <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+            </div>
+
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENIDO -->
+    <div class="hero" style="background-color: coral">
+        <iframe width="100%" height="100%" src="html/index_1.html" scrolling="no" frameborder="no" ></iframe>
+    </div>
+    <!-- MODALS -->
+
+  <!-- Modal Registro -->
+  <div class="modal fade" id="myModalRegistro">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Registro</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="miFormRegistro">
+            <label for="usr">Nombre:</label>
+            <input type="text" class="form-control" id="name" name="nombre">
+            <label for="usr">Usuario:</label>
+            <input type="text" class="form-control" id="usr" name="usuario">
+            <label for="pwd">Password:</label>
+            <input type="text" class="form-control" id="pwd" name="password">
+            <label for="pwd">Confirmación Password:</label>
+            <input type="text" class="form-control" id="pwd_r" name="confirmar password">
+            <p class="alertaRegistro"></p>
+            <br>
+            <button class="btn btn-primary btn_registrarse">Registrarse</button>
+          </div>
+        </div>
+        <div class="confirmacionRegistro">
+          <div class="alert alert-success" role="alert">
+            <div style="text-align: center;">
+              <h2>Bienvenid@ a</h2><br>
+              <h5>Play SafeVial</h5>
+              <h5>Aprende Sobre Seguridad Vial</h5>
+              <br>
+              <span>Cierra esta ventana y da clic en  </span><a href="#" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+              </div>
+            </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- fin modal registro -->
+
+  <!-- Modal Login -->
+  <div class="modal fade" id="myModalLogin">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="miFormLogin">
+            <label for="usr">Usuario:</label>
+            <input type="text" class="form-control" id="usr_login" name="usuario">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd_login" name="password">
+            <p class="alertaLogin"></p>
+            <br>
+            <button class="btn btn-primary btn_login">Ingresar</button>
+          </div>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- fin modal registro -->
+
+  <!-- FIN -->
+
+    <!-- Scripts -->
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/popper.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/jquery.sticky.js"></script>
+    <script src="resources/js/main.js"></script>
+    <script src="resources/js/Services/index.js"></script>
+    <script src="resources/js/comunicacion.js"></script>
+</body>
+</html>
