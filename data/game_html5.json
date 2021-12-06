@@ -5,7 +5,7 @@
         "scorm_nombreCookieEvaluacion": "______",
         "scorm_activarCookieEvaluacion": "true",
         "numero_preguntas": 3,
-        "instrucciones_titulo": "Juego Protección a Ciclistas",
+        "instrucciones_titulo": "Juego Protección a Ciclistas -- MUESTRA",
         "instrucciones_parrafo": "Su misión, si decide aceptarla, es dar al blanco. Para lograrlo, usted debe responder cada una de las preguntas de forma correcta. Para iniciar la actividad, de clic en el botón.",
         "retroalimentacion_generalMal": "<text class='titulo_act1'>¡Desafortunadamente!</text><br><br>Su conocimiento sobre Protección a Ciclistas no superó el puntaje mínimo de aprobación. Lo invitamos a repasar el contenido e intentarlo nuevamente.",
         "retroalimentacion_generalRegular": "<text class='titulo_act1'>¡Bien!</text><br><br>Ha superado el porcentaje mínimo de aprobación. Si quiere mejorar su nota, repase el contenido e intentelo otra vez.<br>",
