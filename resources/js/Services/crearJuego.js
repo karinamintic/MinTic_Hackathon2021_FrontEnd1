@@ -12,28 +12,15 @@ function init()
 {
     //console.log();
     var miLogeo = getCookie("c_logIn");
-    if(miLogeo === "true")
-    {
         //alert("Buenas");
         $(".paso2").hide();
         $(".paso3").hide();
         $(".paso1").show();
-        $(".alertLogeo").hide();
+
 
         f_returnGame();
         $(".numeroPregunta").html("Pregunta "+contadorPreguntas);
 
-    }
-    else
-    {
-        $(".paso1").hide();
-        $(".paso2").hide();
-        $(".paso3").hide();
-        $(".alertLogeo").show();
-
-        f_returnGame();
-        $(".numeroPregunta").html("Pregunta "+contadorPreguntas);
-    }
 
 }
 
