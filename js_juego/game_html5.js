@@ -116,15 +116,19 @@ $(document).ready(function () {
 				{
 					q_respuesta[inicioNumPreguntas] = 1;
 				}
+				else if(q_respuesta[inicioNumPreguntas] == "distractor2")
+				{
+					q_respuesta[inicioNumPreguntas] = 2;
+				}
 				else
 				{
-					if(q_respuesta[inicioNumPreguntas] == "distractor2")
+					if(q_respuesta[inicioNumPreguntas] == "distractor3")
 					{
-						q_respuesta[inicioNumPreguntas] = 2;
+						q_respuesta[inicioNumPreguntas] = 3;
 					}
 					else
 					{
-						q_respuesta[inicioNumPreguntas] = 3;
+						q_respuesta[inicioNumPreguntas] = 4;
 					}
 				}
 				//alert(q_respuesta[inicioNumPreguntas]);
