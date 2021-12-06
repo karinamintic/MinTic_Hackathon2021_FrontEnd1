@@ -496,4 +496,10 @@ a {
 {
   color: #E8316B;
 }
+.posicionInferior
+{
+  position: absolute;
+right:    0;
+bottom:   0;
+}
 

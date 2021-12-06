@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Actividad Arco</title>
+	<!--libs CSS-->
+	<link rel="stylesheet" href="css_juego/libs/jquery-ui.css">
+	<link rel="stylesheet" href="css_juego/libs/jquery-ui.theme.css">
+	<link rel="stylesheet" href="css_juego/libs/animate.css">
+	<link rel="stylesheet" href="css_juego/libs/magic.css">
+	<!-- Fin librerias CSS -->
+
+	<!-- Fuentes de texto -->
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
+	<!-- Fin de fuentes de texto -->
+
+	<!-- ///Librerias de JS o Javascript -->
+	<script src="js_juego/libs/jquery.js"></script>
+	<script src="js_juego/libs/jquery-ui.min.js"></script>
+	<script src="js_juego/libs/jquery.animateSprite.js"></script>
+	<!-- Fin de librerias -->
+
+	<!-- Libreria de comunicación -->
+	<script type="text/javascript" src="resources/js/comunicacion.js"></script>
+	<!-- Fin libreria -->
+
+	<script type="text/javascript" src="js_juego/game_html5.js"></script> <!-- TODO -->
+
+	<link href="css_juego/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<!-- Audios de la actividad -->
+<audio class="miAudioDisparo">
+  <source src="media/1.disparo.ogg" type="audio/ogg">
+  <source src="media/1.disparo.mp3" type="audio/mpeg">
+  <source src="media/1.disparo.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio>
+
+<audio class="miAudioCorrecto">
+  <source src="media/2.correcto.ogg" type="audio/ogg">
+  <source src="media/2.correcto.mp3" type="audio/mpeg">
+  <source src="media/2.correcto.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio>
+
+<audio class="miAudioIncorrecto">
+  <source src="media/3.incorrecto.ogg" type="audio/ogg">
+  <source src="media/3.incorrecto.mp3" type="audio/mpeg">
+  <source src="media/3.incorrecto.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio>
+<!-- Fin Audios de la actividad -->
+
+	<div class="contenedor_act1">
+		<div class="fondo_act1">
+			<img width="960px" height="610px" src="images_juego/act1_fondo1.png" alt=""> <!-- TODO -->
+		</div>
+		<!-- <div class="nubes_act1">
+			<img src="images/act1_nubes.png" alt="">
+		</div> -->
+		
+		<div class="contenedorInstrucciones_act1">
+			<div class="imagenInstrucciones_act">
+				<img width="400px" height="400px" src="images_juego/act1_personaje1.svg" alt="">
+			</div>
+			<div class="contenidoInstrucciones_act1">
+				<h1 id="tituloInstrucciones" class="titulo_act1">Este es el título hola chicos</h1>
+				<p id="parrafoInstrucciones" class="parrafo_act1"> Este es el contenido</p>
+			</div>
+			<div class="botonInstrucciones">
+				<img width="50px" height="50px" src="images_juego/act1_botonSiguiente.svg" alt="">
+			</div>
+			
+		</div>
+		<div class="btn" id="btn_bien"></div>
+		<div class="btn" id="btn_mal"></div>
+		<div class="btn" id="btn_iniciar"></div>
+		<div class="personaje">
+			
+		</div>
+		<div class="personajeBienAnim">
+			
+		</div>
+		<div class="personajeBienEstatico">
+			
+		</div>
+		<div class="personajeMalAnim">
+			
+		</div>
+		<div class="personajeMalEstatico">
+			
+		</div>
+		<div class="contenedorPregunta">
+		<div class="numPregunta titulo_numActividad">1.</div>
+		<div class="enunciado titulo_enunciado">Este es el enunciado</div>
+		<div id="all_distractor1" class="distractor">
+		<div id="1" class="botonDistractor titulo_act1">a</div>
+		<div id="distractor_1" class="enunciadoDistractor parrafo_act1">Este es el enunciado 1</div>	
+		</div>
+		<div id="all_distractor2" class="distractor">
+		<div id="2" class="botonDistractor titulo_act1">b</div>
+		<div id="distractor_2" class="enunciadoDistractor parrafo_act1">Este es el enunciado 2</div>
+		</div>
+		<div id="all_distractor3" class="distractor">
+		<div id="3" class="botonDistractor titulo_act1">c</div>
+		<div id="distractor_3" class="enunciadoDistractor parrafo_act1">Este es el enunciado 3</div>
+		</div>
+		<div id="all_distractor4" class="distractor">
+		<div id="4" class="botonDistractor titulo_act1">d</div>
+		<div id="distractor_4" class="enunciadoDistractor parrafo_act1">Este es el enunciado 4</div>
+		</div>
+		
+		
+		
+		
+		</div>
+		<div class="mascaraPregunta">
+			
+		</div>
+		
+		<div class="botonDisparar">
+			<img width="180px" height="80px" src="images_juego/act1_botonDisparar.svg" alt="">
+		</div>
+		
+		<div class="contenedorRetroalimentacion"><p class="textRetro parrafo_act1">Aqui esta la retroalimentación</p></div>
+		<div class="botonAvanzar">
+			<img width="120px" src="images_juego/act1_botonAvanzar.svg" alt="">
+		</div>
+		
+		<div class="retroGeneral">
+			<div class="retroGeneralMuyBien">
+				<img width="630px" src="images_juego/act1_retroMuyBien.svg" alt="">
+				<div class="puntajeMuyBien titulo_act1">Este es el puntaje</div>
+				<div class="textoRetroMuyBien parrafo_act1">Este es el texto de retroalimentación</div>
+			</div>
+			
+			<div class="retroGeneralRegular">
+				<img width="630px" src="images_juego/act1_retroRegular.svg" alt="">
+				<div class="puntajeRegular titulo_act1">Este es el puntaje</div>
+				<div class="textoRetroRegular parrafo_act1">Este es el texto de retroalimentación</div>
+			</div>
+			
+			<div class="retroGeneralMal">
+				<img width="630px" src="images_juego/act1_retroMal.svg" alt="">
+				<div class="puntajeMal titulo_act1">Este es el puntaje</div>
+				<div class="textoRetroMal parrafo_act1">Este es el texto de retroalimentación</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+</body>
+</html>

@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/css/custom/custom.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/custom/custom.css">
     <!-- END: Custom CSS-->
+    <link rel="stylesheet" href="resources/css/style.css">
 
 </head>
 <!-- END: Head-->
@@ -219,12 +220,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s10 m6 l6 breadcrumbs-left">
-                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Perfil</span></h5>
+                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Crear Juego</span></h5>
+                            <p>Para crear un juego debes seguir 2 pasos que se indicarán en la parte superior</p>
+                            <ol>
+                                <li>Crear Juego (Paso 1/2)</li>
+                                <li>Crear las preguntas (Paso 2/2)</li>
+                            </ol>
+                            <p style="color: #AB4B57;">Debes colocar minimo 2 pregunas / y máximo 10</p>
                         </div>
                         <div class="col s2 m6 l6"><a class="btn btn-floating dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="#!" data-target="dropdown1"><i class="material-icons">expand_more </i><i class="material-icons right">arrow_drop_down</i></a>
                             <ul class="dropdown-content" id="dropdown1" tabindex="0">
-                                <li tabindex="0"><a class="grey-text text-darken-2" href="#">Crear Juego</a></li>
-                                <li tabindex="0"><a class="grey-text text-darken-2" href="#">Jugar</a></li>
+                                <li tabindex="0"><a class="grey-text text-darken-2" href="crearJuego.html">Crear Juego</a></li>
+                                <li tabindex="0"><a class="grey-text text-darken-2" href="jugar.html">Jugar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -232,38 +239,6 @@
             </div>
 
 
-            <div class="col s12">
-                <div class="container">
-
-                        <!-- Modal Trigger -->
-                        <!-- <button id="btnNuevo" type="button" class="waves-effect waves-light btn modal-trigger tooltipped" data-toggle="modal" href="#modalGuardar" data-position="bottom" data-tooltip="Agregar Categoria"><i class="material-icons" >library_add</i></button> -->
-                        <!-- Modal Structure -->
-                        <div id="modalGuardar" class="modal">
-                            <div class="modal-content">
-                                <h4>Agregar Categoria</h4>
-                                <div>
-                                    <input type="text" id="name" placeholder="Introduzca el nombre de la categoria">
-                                    <input type="text" id="description" placeholder="Introduzca la descripción">
-                                </div>
-                                <button class="btn waves-effect waves-light " type="submit" name="action" onclick="guardarInformacion()">Agregar
-                                    <i class="material-icons right"  >send</i>
-                                </button>
-
-                            </div>
-                        </div>
-                        <div id="modalEditar" class="modal">
-                            <div class="modal-content">
-                                <h4>Editar Categoria</h4>
-                                <div>
-                                    <input type="text" id="name_e" placeholder="name">
-                                    <input type="text" id="description_e" placeholder="brand">
-                                </div>
-                                <button class="btn waves-effect waves-light " type="submit" name="action" onclick="editarInformacion()">Editar
-                                    <i class="material-icons right"  >send</i>
-                                </button>
-
-                            </div>
-                        </div>
                         <!-- FINAL MODAL -->
 
                     <div class="section">
@@ -277,46 +252,98 @@
                                     <div class="container caja">
                                         <div class="row">
                                             <!-- CONTENIDO MIBODY-->
-                                            <!-- users view start -->
-                                            <div>
-                                                <h6>CREAR JUEGO</h6>
+                                            <div class="paso1">
+                                                <div class="col s12 m4">
+                                                    <div class="card gradient-shadow gradient-45deg-light-blue-cyan border-radius-3">
+                                                        <div class="card-content center">
+                                                            <!-- <img src="#" alt="images" class="width-40" /> -->
+                                                            <h5 class="white-text lighten-4">Paso 1 de 2</h5>
+                                                            <p class="white-text lighten-4">Crea el juego y no olvides llenar todos lo datos</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col s12 m6">
+                                                    <input placeholder="Introduzca el nombre del juego" id="cj_nombreJuego" type="text" class="validate">
 
-                                                    <input placeholder="Introduzca el nombre del juego" id="nombreJuego" type="text" class="validate">
-                                                    <label for="nombreJuego">Nombre del Juego</label>
+                                                    <select id="cj_categoria">
+                                                        <option value="" disabled selected>Escoge una Categoría</option>
+                                                        <option value="Ciclistas">Ciclistas</option>
+                                                        <option value="Scooters">Scooters</option>
+                                                    </select>
+                                                    <select id="cj_nivel">
+                                                        <option value="" disabled selected>Escoge un Nivel</option>
+                                                        <option value="1">Nivel 1</option>
+                                                        <option value="2">Nivel 2</option>
+                                                        <option value="3">Nivel 3</option>
+                                                    </select>
+                                                    <input placeholder="Introduzca el objetivo del juego" id="cj_objetivo" type="text" class="validate">
 
-                                                <select>
-                                                    <option value="" disabled selected>Escoge una Categoría</option>
-                                                    <option value="Ciclistas">Ciclistas</option>
-                                                    <option value="Scooters">Scooters</option>
-                                                </select>
-                                                <select>
-                                                    <option value="" disabled selected>Escoge un Nivel</option>
-                                                    <option value="Nivel 1">Nivel 1</option>
-                                                    <option value="Nivel 2">Nivel 2</option>
-                                                    <option value="Nivel 1">Nivel 3</option>
-                                                </select>
-                                                <input placeholder="Introduzca el objetivo del juego" id="objetivoJuego" type="text" class="validate">
-                                                    <label for="objetivoJuego">Objetivo juego</label>
-                                                <select>
-                                                    <option value="" disabled selected>Escoge el número de preguntas</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                    <option value="">4</option>
-                                                    <option value="">5</option>
-                                                    <option value="">6</option>
-                                                    <option value="">7</option>
-                                                    <option value="">8</option>
-                                                    <option value="">9</option>
-                                                    <option value="">10</option>
-                                                </select>
-                                                <hr>
-                                                <h6>Preguntas</h6>
-                                                <input type="text" id="enunciado" placeholder="Introduzca el enunciado de la pregunta 1">
-                                                <input type="text" id="enunciado" placeholder="Opción 1">
-                                                <input type="text" id="enunciado" placeholder="Opción 2">
-                                                <input type="text" id="enunciado" placeholder="Opción 3">
-                                                <input type="text" id="enunciado" placeholder="Opción 4">
+                                                </div>
+                                                <div class="col s12 m2">
+                                                    <button class="btn waves-effect waves-light btn_enviarJuego" type="submit" name="action">Siguiente
+                                                        <i class="material-icons right">send</i>
+                                                    </button>
+                                                </div>
                                             </div>
+                                            
+                                            <!-- Fin Paso2 -->
+                                            <div class="paso2">
+                                                <div class="col s12 m4">
+                                                    <div class="card gradient-shadow gradient-45deg-light-blue-cyan border-radius-3">
+                                                        <div class="card-content center">
+                                                            <!-- <img src="#" alt="images" class="width-40" /> -->
+                                                            <h5 class="white-text lighten-4">Paso 2 de 2</h5>
+                                                            <p class="white-text lighten-4">Para crear otra pregunta da clic en el +</p>
+                                                            <br>
+                                                            <a class="btn-floating btn-large waves-effect waves-light red btn_enviarPregunta"><i class="material-icons">add</i></a>
+                                                            <p class="white-text lighten-4">Cuando termine de crear las preguntas de clic en "Finalizar"</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col s12 m6">
+                                                    <h6 class="numeroPregunta"></h6>
+                                                    <input placeholder="Introduzca el enunciado de la pregunta" id="cj_enunciado" type="text" class="validate" value="">
+
+                                                    <div class="card-panel white">
+                                                        <h6 style="color: #AB4B57;">Opciones</h6>
+                                                        <input placeholder="TextoOpcionA" id="cj_opcion1" type="text" class="validate">
+                                                        <input placeholder="TextoOpcionB" id="cj_opcion2" type="text" class="validate">
+                                                        <input placeholder="TextoOpcionC" id="cj_opcion3" type="text" class="validate">
+                                                        <input placeholder="TextoOpcionD" id="cj_opcion4" type="text" class="validate">
+                                                    </div>
+
+                                                    <!-- RADIO BUTTON -->
+                                                    <div>
+                                                        <select id="cj_respuesta">
+                                                            <option value="" disabled selected>Escoge la respuesta correcta</option>
+                                                            <option value="distractor1">Opción 1</option>
+                                                            <option value="distractor2">Opción 2</option>
+                                                            <option value="distractor3">Opción 3</option>
+                                                            <option value="distractor4">Opción 4</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col s12 m2">
+                                                    <button class="btn waves-effect waves-light btnFinalizar" type="submit" name="action">Finalizar
+                                                        <i class="material-icons right">send</i>
+                                                    </button>
+                                                    <!-- <button class="btn waves-effect waves-light posicionInferior btn_enviarPregunta" type="submit" name="action">Finalizar
+                                                        <i class="material-icons right">send</i>
+                                                    </button> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="paso3">
+                                                <div class="alert alert-success" role="alert">
+                                                    <div style="text-align: center;">
+                                                        <h2>Felicidades ya tiene Juego</h2><br>
+                                                        <span>Ahora puede JUGAR</span>
+                                                    </div>
+                                                    </div>
+                                            </div>
+
                                             <!--  FIN CONTENIDO -->
 
                                         </div>
@@ -702,9 +729,9 @@
     <!-- BEGIN PAGE LEVEL JS-->
     <!-- <script src="app-assets/js/scripts/data-tables.js"></script> -->
     <script src="resources/js/comunicacion.js"></script>
-    <script src="resources/js/Services/perfil.js"></script>
     <script src="app-assets/js/scripts/form-elements.js""></script>
     <!-- END PAGE LEVEL JS-->
+    <script src="resources/js/Services/crearJuego.js"></script>
 
 </body>
 
