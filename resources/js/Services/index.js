@@ -126,6 +126,8 @@ function login()
                     setCookie("NOMBRE",respuesta.name,10);
                     setCookie("USUARIO",respuesta.nameUser,10);
                     setCookie("PASSWORD",respuesta.password,10);
+                    ////Login
+                    setCookie("c_logIn",true,10);
                 }
             }
         });

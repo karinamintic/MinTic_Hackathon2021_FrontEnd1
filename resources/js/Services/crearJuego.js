@@ -10,10 +10,31 @@ $( document ).ready(function() {
 
 function init()
 {
-    $(".paso2").hide();
-    $(".paso3").hide();
-    f_returnGame();
-    $(".numeroPregunta").html("Pregunta "+contadorPreguntas);
+    //console.log();
+    var miLogeo = getCookie("c_logIn");
+    if(miLogeo === "true")
+    {
+        //alert("Buenas");
+        $(".paso2").hide();
+        $(".paso3").hide();
+        $(".paso1").show();
+        $(".alertLogeo").hide();
+
+        f_returnGame();
+        $(".numeroPregunta").html("Pregunta "+contadorPreguntas);
+
+    }
+    else
+    {
+        $(".paso1").hide();
+        $(".paso2").hide();
+        $(".paso3").hide();
+        $(".alertLogeo").show();
+
+        f_returnGame();
+        $(".numeroPregunta").html("Pregunta "+contadorPreguntas);
+    }
+
 }
 
 function registroJuego()
@@ -260,4 +281,22 @@ $(document).on("click", ".btnFinalizar", function(){
     }
 
 });
+$(".btn_logOut").on("click", ".btnFinalizar", function(){
+
+    
+    console.log("Contados Preguntas = "+contadorPreguntas);
+    if(contadorPreguntas <= 2)
+    {
+        alert("Debes crear tres preguntas");
+    }
+    else
+    {
+        window.location.href = "perfil.html";
+    }
+
+    window.location.href = "index.html";
+    setCookie("c_logIn",false.name,10);
+
+});
+
 
