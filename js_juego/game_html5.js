@@ -112,17 +112,17 @@ $(document).ready(function () {
 				$('#distractor_4').html(q_distractor4[inicioNumPreguntas]);
 
 				
-				if(q_respuesta[inicioNumPreguntas] == "distractor1")
+				if(q_respuesta[inicioNumPreguntas] === "distractor1")
 				{
 					q_respuesta[inicioNumPreguntas] = 1;
 				}
-				else if(q_respuesta[inicioNumPreguntas] == "distractor2")
+				else if(q_respuesta[inicioNumPreguntas] === "distractor2")
 				{
 					q_respuesta[inicioNumPreguntas] = 2;
 				}
 				else
 				{
-					if(q_respuesta[inicioNumPreguntas] == "distractor3")
+					if(q_respuesta[inicioNumPreguntas] === "distractor3")
 					{
 						q_respuesta[inicioNumPreguntas] = 3;
 					}
@@ -335,7 +335,7 @@ $(document).ready(function () {
 				q_distractor2[1] = json.pregunta_2.distractor_2;
 				q_distractor3[1] = json.pregunta_2.distractor_3;
 				q_distractor4[1] = json.pregunta_2.distractor_4; */
-				q_respuesta[1] = json.pregunta_2.respuesta_correcta;
+				/* q_respuesta[1] = json.pregunta_2.respuesta_correcta; */
 				q_retroIncorrecto1Intento[1] = json.pregunta_2.retroalimentacion_incorrectoPrimerIntento;
 				q_retroIncorrecto2Intento[1] = json.pregunta_2.retroalimentacion_incorrectoSegundoIntento;
 				q_retroCorrecto[1] = json.pregunta_2.retoalimentacion_correcta;
@@ -374,7 +374,7 @@ $(document).ready(function () {
 				q_distractor2[0] = json.pregunta_1.distractor_2;
 				q_distractor3[0] = json.pregunta_1.distractor_3;
 				q_distractor4[0] = json.pregunta_1.distractor_4; */
-				q_respuesta[0] = json.pregunta_1.respuesta_correcta;
+				/* q_respuesta[0] = json.pregunta_1.respuesta_correcta; */
 				q_retroIncorrecto1Intento[0] = json.pregunta_1.retroalimentacion_incorrectoPrimerIntento;
 				q_retroIncorrecto2Intento[0] = json.pregunta_1.retroalimentacion_incorrectoSegundoIntento;
 				q_retroCorrecto[0] = json.pregunta_1.retoalimentacion_correcta;
@@ -437,7 +437,7 @@ $(document).ready(function () {
 				q_distractor2[0] = json.pregunta_1.distractor_2;
 				q_distractor3[0] = json.pregunta_1.distractor_3;
 				q_distractor4[0] = json.pregunta_1.distractor_4; */
-				q_respuesta[0] = json.pregunta_1.respuesta_correcta;
+				/* q_respuesta[0] = json.pregunta_1.respuesta_correcta; */
 				q_retroIncorrecto1Intento[0] = json.pregunta_1.retroalimentacion_incorrectoPrimerIntento;
 				q_retroIncorrecto2Intento[0] = json.pregunta_1.retroalimentacion_incorrectoSegundoIntento;
 				q_retroCorrecto[0] = json.pregunta_1.retoalimentacion_correcta;
