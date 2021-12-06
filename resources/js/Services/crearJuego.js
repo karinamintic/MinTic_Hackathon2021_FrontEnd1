@@ -204,22 +204,45 @@ function f_clear()
 }
 
 $(document).on("click", ".btn_enviarJuego", function(){
-    registroJuego();
-    $(".paso1").hide();
-    $(".paso2").show();
 
-});
-$(document).on("click", ".btn_enviarPregunta", function(){
-    contadorPreguntas = contadorPreguntas + 1;
-    $(".numeroPregunta").html("Pregunta "+contadorPreguntas);
-    if(contadorPreguntas >= 10)
+    if($("#cj_nombreJuego").val() != "" && $("#cj_categoria").val() != "" && $("#cj_nivel").val() != "" && $("#cj_objetivo").val() != "")
     {
-        alert("No puedes hacer más de 10 preguntas, por favor dar clic en FINALIZAR");
+        registroJuego();
+        $(".paso1").hide();
+        $(".paso2").show();
     }
     else
     {
-        registroPregunta();
+        alert("Tienes que llenar todos los datos");
     }
+    
+
+});
+$(document).on("click", ".btn_enviarPregunta", function(){
+
+    if($("#cj_enunciado").val() != "" && $("#cj_opcion1").val() != "" && $("#cj_opcion2").val() != "" && $("#cj_opcion3").val() != "" && $("#cj_opcion4").val() != "" && $("#cj_repuesta").val() != "")
+    {
+        contadorPreguntas = contadorPreguntas + 1;
+        $(".numeroPregunta").html("Pregunta "+contadorPreguntas);
+        if(contadorPreguntas > 3)
+        {
+            alert("Por el momento...solo puedes realizar hasta 3 preguntas");
+            $(".paso2").hide();
+            $(".paso3").show();
+            registroPregunta();
+        }
+        else
+        {
+            registroPregunta();
+        }
+    }
+    else
+    {
+        alert("Tienes que llenar todos los datos");
+    }
+
+
+    
 
 });
 $(document).on("click", ".btnFinalizar", function(){
@@ -227,7 +250,7 @@ $(document).on("click", ".btnFinalizar", function(){
     console.log("Contados Preguntas = "+contadorPreguntas);
     if(contadorPreguntas <= 2)
     {
-        alert("Debes crear por lo menos dos preguntas");
+        alert("Debes crear tres preguntas");
     }
     else
     {

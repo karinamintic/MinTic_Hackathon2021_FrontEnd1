@@ -22,10 +22,10 @@
         "distractor_2": "Son personas que salen a trotar",
         "distractor_3": "Son personas que conducen Bicicleta",
         "distractor_4": "Todas las anteriores",
-        "respuesta_correcta": 3,
-        "retroalimentacion_incorrectoPrimerIntento": "No acertaste, recuerda que los ciclistas son personas que conducen Bicicleta",
+        "respuesta_correcta": 1,
+        "retroalimentacion_incorrectoPrimerIntento": "No es correcto",
         "retroalimentacion_incorrectoSegundoIntento": "Retro segundo Intento",
-        "retoalimentacion_correcta": "Correcto, los ciclistas son personas que conducen Bicicleta"
+        "retoalimentacion_correcta": "Correcto"
     },
     "pregunta_2": {
         "enunciado": "Indique un factor de riesgo",
@@ -34,10 +34,10 @@
         "distractor_2": "Las distancias inadecuadas",
         "distractor_3": "No haber tanqueado",
         "distractor_4": "No encender luces",
-        "respuesta_correcta": 2,
-        "retroalimentacion_incorrectoPrimerIntento": "No acertaste, recuerda que un factor de riesgo es las distancias inadecuadas",
+        "respuesta_correcta": 1,
+        "retroalimentacion_incorrectoPrimerIntento": "No es correcto",
         "retroalimentacion_incorrectoSegundoIntento": "Retro segundo Intento",
-        "retoalimentacion_correcta": "Correcto, Las distancias inadecuadas es un factor de riesgo"
+        "retoalimentacion_correcta": "Correcto"
     },
     "pregunta_3": {
         "enunciado": "¿Cómo mitigar los factores de riesgo para la interacción de ciclistas?",
@@ -46,10 +46,10 @@
         "distractor_2": "Ir a alta velocidad",
         "distractor_3": "Llevar parrillero",
         "distractor_4": "Tener claro los puntos ciegos",
-        "respuesta_correcta": 4,
-        "retroalimentacion_incorrectoPrimerIntento": "No acertaste, recuerda que para mitigar accidentes toca tener claro los puntos ciegos",
+        "respuesta_correcta": 1,
+        "retroalimentacion_incorrectoPrimerIntento": "No es correcto",
         "retroalimentacion_incorrectoSegundoIntento": "Retro segundo Intento",
-        "retoalimentacion_correcta": "Correcto, toca tener claro los puntos ciegos"
+        "retoalimentacion_correcta": "Correcto"
     },
     "pregunta_4": {
         "enunciado": "Pregunta 4",

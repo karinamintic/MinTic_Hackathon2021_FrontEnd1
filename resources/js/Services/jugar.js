@@ -8,7 +8,7 @@ $( document ).ready(function() {
 function init()
 {
     traerInformacion();
-    $('.contenedorJuego').append('<iframe width="960px" height = "610px" src= "game_html5.html" frameborder="0" scrolling="no"></iframe>');
+    $('.contenedorJuego').append('<iframe style="width: 100%;" class"responsive-iframe" src= "game_html5.html" frameborder="0" scrolling="no"></iframe>');
 
 }
 function traerInformacion(){
@@ -63,7 +63,7 @@ $('#tablaJugar tbody').on( 'click', 'tr', function ()
 });
 $(document).on("click", ".btnJugar", function(){
     $('.contenedorJuego').empty();
-    $('.contenedorJuego').append('<iframe width="960px" height = "610px" src= "game_html5.html" frameborder="0" scrolling="no"></iframe>');
+    $('.contenedorJuego').append('<iframe class"responsive-iframe" width="960px" height = "610px" src= "game_html5.html" frameborder="0" scrolling="no"></iframe>');
     $('#modalJugar').modal('open');
     console.log("MI_ID_JUGAR = "+getCookie("MI_ID_JUGAR"));
 });
